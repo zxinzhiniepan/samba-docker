@@ -8,7 +8,7 @@ WORKDIR ${APPATH}
 
 ENV TZ=${TZ:-Asia/Shanghai}
 
-COPY ./* ${APPATH}
+COPY ./* ${APPATH}/
 
 RUN chmod +x ./* && \
     ./build.sh

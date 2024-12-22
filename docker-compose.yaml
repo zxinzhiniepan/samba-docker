@@ -1,0 +1,19 @@
+  samba:
+    image: niliaerith/samba:latest
+    container_name: samba
+    hostname: samba
+    restart: always
+    network_mode: host
+    #ports:
+    #  - 137:137/udp
+    #  - 138:138/udp
+    #  - 139:139
+    #  - 445:445
+    volumes:
+      - /opt/docker/samba/config:/config
+    environment:
+      - PUID=0
+      - PGID=0
+      - TZ=Asia/Shanghai
+      - IP_ADDR=your_ip
+    privileged: true
